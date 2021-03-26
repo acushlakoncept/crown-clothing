@@ -10,7 +10,7 @@ The application features includes:
 ![screenshot](./crown-clothing.jpg)
 
 ## Live Demo
-[Live Demo](#)
+[Live Demo](https://cush-clothing.herokuapp.com/)
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
