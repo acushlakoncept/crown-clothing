@@ -1,4 +1,4 @@
-# CAR RENTALS APP - FINAL CAPSTONE PROJECT
+# CROWN CLOTHINGS E-COMMERCE APP
 
 In this project, I developed an E-commerce application with React, Redux, Stripe and Firebase.
 
