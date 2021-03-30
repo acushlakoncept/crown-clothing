@@ -53,8 +53,8 @@ export const addCollectionAndDocuments = (collectionKey, objectsToAdd) => {
 };
 
 export const convertCollectionSnapshotToMap = (collections) => {
-  const transformedCollection = collections.docs.map(doc => {
-    const { title, items} = doc.data();
+  const transformedCollection = collections.docs.map((doc) => {
+    const { title, items } = doc.data();
 
     return {
       routeName: encodeURI(title.toLowerCase()),
@@ -63,8 +63,12 @@ export const convertCollectionSnapshotToMap = (collections) => {
       items
     };
   });
-  console.log(transformedCollection)
-}
+
+  return transformedCollection.reduce((accumulator, collection) => {
+    accumulator[collection.title.toLowerCase()] = collection;
+    return accumulator;
+  }, {});
+};
 
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
