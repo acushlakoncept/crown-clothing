@@ -26,9 +26,11 @@ $ git clone https://github.com/acushlakoncept/crown-clothing.git
 $ cd crown-clothing
 ~~~
 
-Install modules:
+Install modules for server and client app:
 
 ```
+yarn add
+cd client
 yarn add
 ```
 
@@ -37,21 +39,17 @@ yarn add
 Start server with:
 
 ```
-    yarn start or npm start
+    yarn dev
 ```
-### Running Test
-Jest is used to run all the tests found in this application
-In order to run the test you can simply type `yarn test` or `npm run test`
-
-Either ways, if you encounter any error while running either command, its likely you do not have `jest` installed globally, so please run `npm install -g jest-cli` then try again. That should do it.
 
 ### Deployment instructions
 
 ```
     git add .
     git commit -m "ready for first push to heroku"  
-    _~heroku create $APP-NAME --buildpack mars/create-react-app~_
+    heroku create $APP-NAME
     git push heroku $BRANCH_NAME:master
+    heroku config:set STRIPE_SECRET_KEY=xxxxxxxxx
 ```
 
 Fire up your app by running `heroku open` Yay!!! your app has been deployed successfully.
