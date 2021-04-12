@@ -50,7 +50,7 @@ Either ways, if you encounter any error while running either command, its likely
 ```
     git add .
     git commit -m "ready for first push to heroku"  
-    heroku create $APP-NAME --buildpack mars/create-react-app
+    _~heroku create $APP-NAME --buildpack mars/create-react-app~_
     git push heroku $BRANCH_NAME:master
 ```
 
